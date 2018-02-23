@@ -1,0 +1,29 @@
+--- criu/compel/plugins/include/uapi/std/syscall.h	2018-02-23 16:46:35.788798190 +0000
++++ syscall.h	2018-02-23 16:57:15.150599553 +0000
+@@ -72,7 +72,6 @@
+ extern long sys_mount(char *dev_nmae, char *dir_name, char *type, unsigned long flags, void *data);
+ extern long sys_umount2(char *name, int flags);
+ extern long sys_gettid(void);
+-extern long sys_futex(uint32_t *uaddr, int op, uint32_t val, struct timespec *utime, uint32_t *uaddr2, uint32_t val3);
+ extern long sys_set_tid_address(int *tid_addr);
+ extern long sys_restart_syscall(void);
+ extern long sys_timer_create(clockid_t which_clock, struct sigevent *timer_event_spec, kernel_timer_t *created_timer_id);
+@@ -104,4 +103,4 @@
+ extern long sys_gettimeofday(struct timeval *tv, struct timezone *tz);
+ extern long sys_preadv_raw(int fd, struct iovec *iov, unsigned long nr, unsigned long pos_l, unsigned long pos_h);
+ extern long sys_userfaultfd(int flags);
+-#endif /* compel_plugins_std_syscall_h */
+\ No newline at end of file
++#endif /* compel_plugins_std_syscall_h */
+
+--- descriptor.pb-c.c	2018-02-23 16:34:10.177473766 +0000
++++ images/google/protobuf/descriptor.pb-c.c	2018-02-23 16:34:23.375493120 +0000
+@@ -6,7 +6,7 @@
+ #define PROTOBUF_C__NO_DEPRECATED
+ #endif
+ 
+-#include "google/protobuf/descriptor.pb-c.h"
++#include "descriptor.pb-c.h"
+ void   google__protobuf__file_descriptor_set__init
+                      (Google__Protobuf__FileDescriptorSet         *message)
+ {
