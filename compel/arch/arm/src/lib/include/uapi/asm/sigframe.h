@@ -3,6 +3,10 @@
 
 #include <compel/asm/infect-types.h>
 
+#ifdef ANDROID_BUILD
+#include <sys/user.h>
+#endif
+
 /* Copied from the Linux kernel header arch/arm/include/asm/sigcontext.h */
 
 struct rt_sigcontext {
