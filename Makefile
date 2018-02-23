@@ -34,7 +34,7 @@ endif
 #
 # Architecture specific options.
 ifeq ($(ARCH),arm)
-        ARMV		:= $(shell echo $(UNAME-M) | sed -nr 's/armv([[:digit:]]).*/\1/p; t; i7')
+        ARMV		:= 7
         DEFINES		:= -DCONFIG_ARMV$(ARMV)
 
         ifeq ($(ARMV),6)

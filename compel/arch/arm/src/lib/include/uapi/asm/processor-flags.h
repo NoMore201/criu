@@ -19,7 +19,9 @@
 #define SYSTEM_MODE     0x0000001f
 #define MODE32_BIT      0x00000010
 #define MODE_MASK       0x0000001f
+#ifndef ANDROID_BUILD
 #define PSR_T_BIT       0x00000020
+#endif
 #define PSR_F_BIT       0x00000040
 #define PSR_I_BIT       0x00000080
 #define PSR_A_BIT       0x00000100
